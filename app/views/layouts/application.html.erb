@@ -8,14 +8,14 @@
 </head>
 <body>
 <div class="container">
-  <%= render "layout/header" %>
+  <%= render "layouts/header" %>
   <section class="round">
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, :class => "flash #{key}") %>
     <% end %> 
     <%= yield %>
   </section>
-  <%= render "layout/footer" %>
+  <%= render "layouts/footer" %>
   <%= debug(params) if Rails.env.development? %>
 </div>
 

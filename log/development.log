@@ -1,1 +1,156 @@
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/thomas/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:47:50 -0800
+
+Mysql2::Error (Unknown database 'StoryTime_development'):
+  
+
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.8ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:48:15 -0800
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (68.4ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (undefined local variable or method `title' for #<#<Class:0xa310fc4>:0xa308f54>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: <head>
+    4:   <title><%= title %></title>
+    5:   <%= stylesheet_link_tag :all %>
+    6:   <%= javascript_include_tag :defaults %>
+    7:   <%= csrf_meta_tag %>
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___112251501_85451710__723250491'
+
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:50:24 -0800
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Missing partial layout/header with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/thomas/fun/StoryTime/app/views"):
+    8: </head>
+    9: <body>
+    10: <div class="container">
+    11:   <%= render "layout/header" %>
+    12:   <section class="round">
+    13:     <% flash.each do |key, value| %>
+    14:       <%= content_tag(:div, value, :class => "flash #{key}") %>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___112251501_90330010__723250491'
+
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:50:48 -0800
+  Processing by PagesController#home as HTML
+Rendered layouts/_header.html.erb (11.6ms)
+Rendered pages/home.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined local variable or method `logo' for #<#<Class:0xa073c30>:0x9f377e0>):
+    1: <header>
+    2: <%= link_to logo, home_path %>
+    3: <nav class="round">
+    4:   <ul>
+    5:     <li><%= link_to "Home" , home_path %></li>
+  app/views/layouts/_header.html.erb:2:in `_app_views_layouts__header_html_erb__391955844_91393660__441461346'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___112251501_87557750__723250491'
+
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:51:03 -0800
+  Processing by PagesController#home as HTML
+Rendered layouts/_header.html.erb (12.1ms)
+Rendered pages/home.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `home_path' for #<#<Class:0xac13b08>:0xac0f594>):
+    2: 
+    3: <nav class="round">
+    4:   <ul>
+    5:     <li><%= link_to "Home" , home_path %></li>
+    6:     <li><%= link_to "Help" , help_path %></li>
+    7:   </ul>
+    8: </nav>
+  app/views/layouts/_header.html.erb:5:in `_app_views_layouts__header_html_erb__391955844_90103090__441461346'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___112251501_90203940__723250491'
+
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:51:41 -0800
+  Processing by PagesController#home as HTML
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (12.1ms)
+Rendered pages/home.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined local variable or method `contact_path' for #<#<Class:0xae19510>:0xae16838>):
+    2:   <nav class="round" >
+    3:     <ul>
+    4:       <li><%= link_to "Developers" , about_path %></li>
+    5:       <li><%= link_to "Help" , contact_path %></li>
+    6:     </ul>
+    7:   </nav>
+    8: </footer>
+  app/views/layouts/_footer.html.erb:5:in `_app_views_layouts__footer_html_erb___838305066_91170260__916865874'
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb___112251501_91266380__723250491'
+
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /home/thomas/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-12 13:52:03 -0800
+  Processing by PagesController#home as HTML
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/home.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2011-11-12 13:54:42 -0800
+  Processing by PagesController#developers as HTML
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/developers.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-11-12 13:54:45 -0800
+  Processing by PagesController#about as HTML
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Rendered pages/about.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-11-12 13:55:12 -0800
+  Processing by PagesController#about as HTML
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/about.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-11-12 13:55:50 -0800
+  Processing by PagesController#about as HTML
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered pages/about.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
